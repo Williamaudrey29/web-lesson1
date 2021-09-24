@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Lập trình web buổi 1</Title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        
+        <div class="box">
+            <h1 class="header">Lập trình web buổi 1</h1><br>
+            <h4 class="header">Họ và tên: Bùi Đình Quang</h4>
+            <h4 class="header">Mã SV: B18DCCN479</h4>
+        </div>
+
+        <!-- Tao left side menu -->
+        <div class="wrapper">
+
+          <input type="checkbox" id="btn" hidden>
+          <label for="btn" class="menu-btn">&#9776</label>
+  
+          <nav id="sidebar">
+              <div class="title">
+                  Side Menu</div>
+
+              <ul class="list-items">
+                  <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                  <li><a href="#"><i class="fas fa-sliders-h"></i>Clients</a></li>
+                  <li><a href="#"><i class="fas fa-address-book"></i>Services</a></li>
+                  <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                  <li><a href="#"><i class="fas fa-user"></i>About us</a></li>
+              </ul>
+  
+          </nav>
+        </div>
+
+      <!-- Tao form -->
+        <div class="container">
+            <form>
+                <label class="title-form"><h1 style="color: red;">Đăng ký thông tin</h1></label>
+                <hr>
+                <label for="uname">User name: </label>
+                <input type="text" name="uname" class="uname group1" autocomplete="on" placeholder="Please type your username"><br><br>
+                
+                <label for="password">Password: </label>
+                <input type="password" name="password" class="password group1" autocomplete="on" placeholder="Please choose strong password"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="email group1" placeholder="Please type your email"><br><br>
+
+                <label for="date">Ngày sinh: </label>
+                <input type="date" name="date" class="date"><br><br>
+
+                <label for="sex">Giới tính: </label>
+                <label for="nam">Nam:</label>
+                <input type="radio" class="sex" name="sex" value="Nam:">
+                <label for="nữ">Nữ:</label>
+                <input type="radio" class="sex" name="sex" value="Nữ:"><br><br>
+
+                <label for="city" >Tỉnh/ Thành phố: </label>
+                <select class="select group1">
+                    <option value="Thái Bình">Thái Bình</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hải Dương">Hải Dương</option>
+                    <option value="other" selected>other</option>
+                </select>
+                <br><br>
+                <label for="favorite">Sở thích: </label>
+                <label for="sport">Thể thao: </label>
+                <input type="checkbox">
+                <label for="music">Nghe nhạc: </label>
+                <input type="checkbox">
+                <label for="shopping">Mua sắm: </label>
+                <input type="checkbox">
+                <label for="travelling">Du lịch: </label>
+                <input type="checkbox">
+                <br><br>
+
+                <label for="description">Mô tả bản thân:</label><br><br>
+                <textarea cols="50" rows="10" class="group1 ">Write something about you...
+                </textarea>
+                <br><br>
+                <input type="submit" value="Submit" class="button submit group1"><br><br>
+                <input type="button" value="Reset" class="button reset group1"><br><br>
+
+                <label for="address" style="font-weight: bold;" class="social">Địa chỉ: Trường THPT Vũ Tiên</label><br><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.9100640540437!2d106.34215521441607!3d20.38659771476633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135e34b79dcc52d%3A0x21269b0cec597873!2zVHLGsOG7nW5nIFRIUFQgVsWpIFRpw6pu!5e0!3m2!1svi!2s!4v1632423888785!5m2!1svi!2s" 
+                width="355" height="300" class="map"
+                style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+                <br><br>
+
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKVNguyenTraiHaDong&tabs&width=355&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+                width="355" height="130" class="social"
+                style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+              </iframe>
+                <br><br>
+            </form>
+        </div>
+    
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "120873722648203");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!--Tao footer-->
+    <div id="footer">
+      <footer>
+        End of the web
+      </footer>
+    </div>
+    </body>
+
+</html>
